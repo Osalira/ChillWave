@@ -1,0 +1,98 @@
+/* --------------------------------the navigation bar section-------------------------------------------- */
+
+img {
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+}
+
+/* --------------------------------End of the navigation bar section-------------------------------------------- */
+
+/* ------------------------THE BODY SECTION ------------------------------------- */
+
+.bodyClass {
+  padding: 50px;
+  margin: 70px;
+}
+
+/* ------------------------END OF THE BODY SECTION ------------------------------------- */
+
+/* ------------------------the post something section ------------------------------------- */
+
+.boxCategorie {
+  inline-size: 100px;
+  border: solid;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  width: 20%;
+  float: left;
+}
+
+.selectSection {
+  padding: 0px;
+}
+
+.selectCategories {
+  float: left;
+  margin-right: 200px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.inputPostBox {
+  width: 80%;
+}
+.textPostBox {
+  width: 80%;
+}
+
+.postBox {
+  width: 80%;
+}
+
+.textAreaPost {
+  width: 100%;
+}
+.addressTitlePost {
+  width: 100%;
+}
+.titlePost {
+  width: 100%;
+}
+.postButtonDiv {
+  display: inline-block;
+  text-align: center;
+  margin-left: 30%;
+}
+
+.buttonPost {
+  width: 100px;
+}
+
+/* ------------------------End of the post something section ------------------------------------- */
+
+/* --------------------------------the footer SECTION-------------------------------------------- */
+
+.footerT {
+  padding: auto;
+  height: 100px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: gray;
+}
+
+/* --------------------------------the LOGINPAGE SECTION-------------------------------------------- */
+
+/* --------------------------------END of the LOGINPAGE SECTION-------------------------------------------- */
+
+.customContainer {
+  height: 300px;
+}
+
+.samplePost {
+  height: 220px;
+}
