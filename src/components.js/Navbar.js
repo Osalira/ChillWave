@@ -2,10 +2,10 @@ import React from "react";
 import SecondNavbar from "./SecondNavBar";
 import FirstNavbar from "./FirstNavbar";
 
-function Navbar(){
+function Navbar(props){
 return <div>
     
-    <FirstNavbar/>
+    <FirstNavbar modalState={props.modalState} modalStateU={props.modalStateU}/>
     
     <SecondNavbar/>
   

@@ -2,7 +2,7 @@ import React from "react";
 import LoginSignUpBtn from "./LoginSignUpBtn";
 import logo from "./logoWave.jpeg";
 
-function FirstNavbar() {
+function FirstNavbar(props) {
   return (
     <div>
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -24,7 +24,7 @@ function FirstNavbar() {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="ms-auto">
-              <LoginSignUpBtn />
+              <LoginSignUpBtn modalState={props.modalState} modalStateU={props.modalStateU}/>
             </div>
           </div>
         </div>

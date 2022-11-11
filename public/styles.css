@@ -87,7 +87,28 @@ img {
 
 /* --------------------------------the LOGINPAGE SECTION-------------------------------------------- */
 
-/* --------------------------------END of the LOGINPAGE SECTION-------------------------------------------- */
+/* .loginBtnT {
+  z-index: 1; 
+}*/
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.modalContainer {
+  max-width: 500px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: azure;
+  /* box-shadow: 0px; */
+}
 
 .customContainer {
   height: 300px;
@@ -96,3 +117,23 @@ img {
 .samplePost {
   height: 220px;
 }
+
+.modalRight {
+  width: 100%;
+}
+
+.closeBtn {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+}
+
+.contentLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}
+/* --------------------------------END of the LOGINPAGE SECTION-------------------------------------------- */
