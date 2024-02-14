@@ -65,11 +65,11 @@ function PostsBody(props) {
             />
           </div>
 
-          <div className='selectSection'>
-            <div className='boxCategorie'>
+          <div className='row selectSection'>
+            <div className='boxCategorie bg-primary col-sm-3'>
               <p>Categorie :</p>
             </div>
-            <div className='selectCategories'>
+            <div className='col-lg-6'>
               <SelectCategories />
             </div>
           </div>

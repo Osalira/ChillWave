@@ -1,6 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function LoginPage({ open, onClose }) {
+function LoginPage(props) {
+  const [userLogin, setUserLogin] = useState({
+    usernameLog: '',
+    passwordLogin: '',
+  });
+
+  function handleLogin(e) {
+    const { name, value } = e.target;
+    setUserLogin((prevValue) => {
+      return {
+        ...prevValue,
+        [name]: value,
+      };
+    });
+  }
+  function sendInfoLog(event) {
+    props.sendLoginInfo(userLogin);
+    props.onClose();
+
+    setUserLogin({
+      usernameLog: '',
+      passwordLogin: '',
+    });
+    event.preventDefault();
+  }
+
+  // ---------------------------section differ--------------------------------
+  // prevent the click on the login page to close the page
   function preventCloseOnClick(event) {
     event.stopPropagation();
   }
@@ -9,53 +36,57 @@ function LoginPage({ open, onClose }) {
 anything if the the modal state in the app file is false, only show the page if the
 State is true which can only be trigger by a function in the app file that depends on the click of
 the LOGIN button*/
-  if (!open) return null;
+  if (!props.open) return null;
 
   return (
     <div>
-      <div onClick={onClose} className='overlay'>
+      <div onClick={props.onClose} className='overlay'>
         <div onClick={preventCloseOnClick} className='modalContainer'>
           <div className='modalRight'>
-            <p onClick={onClose} className='closeBtn'>
+            <p onClick={props.onClose} className='closeBtn'>
               X
             </p>
             <div className='contentLogin'>
               <form>
                 <div class='form-group'>
-                  <label for='exampleInputEmail1'>Email address</label>
+                  <label for='exampleInputEmail5'>
+                    Email address or Username
+                  </label>
                   <input
-                    type='email'
+                    type='text'
+                    name='usernameLog'
+                    value={userLogin.usernameLog}
                     class='form-control'
-                    id='exampleInputEmail1'
+                    id='exampleInputEmail5'
                     aria-describedby='emailHelp'
                     placeholder='Enter email'
+                    onChange={handleLogin}
                   />
                   <small id='emailHelp' class='form-text text-muted'>
                     We'll never share your email with anyone else.
                   </small>
                 </div>
                 <div class='form-group'>
-                  <label for='exampleInputPassword1'>Password</label>
+                  <label for='exampleInputPassword6'>Password</label>
                   <input
                     type='password'
-                    class='form-control'
-                    id='exampleInputPassword1'
+                    name='passwordLogin'
+                    value={userLogin.passwordLogin}
+                    className='form-control'
+                    id='exampleInputPassword6'
                     placeholder='Password'
+                    onChange={handleLogin}
                   />
                 </div>
-                <div class='form-group form-check'>
-                  <input
-                    type='checkbox'
-                    class='form-check-input'
-                    id='exampleCheck1'
-                  />
-                  <label class='form-check-label' for='exampleCheck1'>
-                    Check me out
-                  </label>
+                <div className='loginBtn'>
+                  <button
+                    type='submit'
+                    className='btn btn-primary'
+                    onClick={sendInfoLog}
+                  >
+                    LogIn
+                  </button>
                 </div>
-                <button type='submit' class='btn btn-primary'>
-                  LogIn
-                </button>
               </form>
             </div>
           </div>

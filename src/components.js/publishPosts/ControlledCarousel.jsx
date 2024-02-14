@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import BackgroundPost from './BackgroundPost';
 
 function ControlledCarousel(props) {
   // Array form body passed through props up to here
   const arrayFromBody = props.arrayFromBody;
- 
-  
+
   return (
     <div className='customContainer'>
       <div
@@ -14,19 +13,13 @@ function ControlledCarousel(props) {
         data-bs-ride='carousel'
       >
         <div class='carousel-inner'>
-{/* here is the element that show before anyone types something */}
-         
-         <div class='carousel-item active samplePost'>
-                <BackgroundPost
-                  key=""
-                  id=''
-                  title=""
-                  address=""
-                  content=""
-                />
-              </div>
-  
-         {/* --------------------------------------------------------------- */}
+          {/* here is the element that show before anyone types something */}
+
+          <div class='carousel-item active samplePost'>
+            <BackgroundPost key='' id='' title='' address='' content='' />
+          </div>
+
+          {/* --------------------------------------------------------------- */}
 
           {/* // here i am looping through an array taken in the BODY FILE and
       // i am setting the value of title, address and content by holding each element
